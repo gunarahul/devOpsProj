@@ -21,6 +21,7 @@ public class Websitecheck {
 	 @BeforeClass
 	  public void beforeClass() {
 		 
+		  try{
 		 // System.setProperty("webdriver.chrome.driver","/home/devops/devOpsProjTest/chromedriver.exe");
 		   //driver = new ChromeDriver();
 		  driver = new HtmlUnitDriver();
@@ -29,7 +30,10 @@ public class Websitecheck {
 		  //driver.manage().window().maximize();
 		  //driver.manage().timeouts().implicitlyWait(70,TimeUnit.SECONDS);
 		  //driver.manage().window().maximize();
-		  
+		  }catch(Exception e){
+			  e.printStackTrace();
+			System.exit(1);	
+		  }
 	  }
 	 
 	
